@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Gautam Ahuja",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -26.76, "left": -24.55, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": 37.09,
+      "left": 291.58,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": -267.58,
+      "left": 53.76,
+      "attrs": { "pixels": "16" }
+    }
+  ],
+  "connections": [
+    [ "joystick1:VCC", "uno:5V", "red", [ "v37.55", "h-174.92" ] ],
+    [ "joystick1:VERT", "uno:A1", "green", [ "v28.2", "h-133.06" ] ],
+    [ "joystick1:HORZ", "uno:A0", "blue", [ "v36.62", "h-0.46" ] ],
+    [ "joystick1:GND", "uno:GND.2", "black", [ "v58.13", "h-192.74" ] ],
+    [ "joystick1:SEL", "uno:8", "green", [ "v19.36", "h-83.26", "v-207.48", "h-115.56" ] ],
+    [ "ring1:GND", "uno:GND.1", "black", [ "v34.34", "h-11.71" ] ],
+    [ "ring1:VCC", "uno:5V", "red", [ "v45.26", "h-159.11", "v282.41", "h184.18", "v-42.29" ] ],
+    [ "ring1:DIN", "uno:11", "green", [ "v0" ] ]
+  ]
+}
