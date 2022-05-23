@@ -38,10 +38,10 @@ void loop(){
 
 void check_direction(){
 
-  if (analogRead(hpin) > 600) led_index++;
-  else if (analogRead(hpin) < 400) led_index--;
-  else if (analogRead(vpin) > 600) c=c+10;
-  else if (analogRead(vpin) < 400) c=c-10;
+  if (analogRead(hpin) > 512) led_index++;
+  else if (analogRead(hpin) < 512) led_index--;
+  else if (analogRead(vpin) > 512) c=c+10;
+  else if (analogRead(vpin) < 512) c=c-10;
   
   led_index = led_index%15;
 
